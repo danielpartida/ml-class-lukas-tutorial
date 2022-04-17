@@ -7,7 +7,7 @@ df = pd.read_csv('tweets.csv')
 target = df['is_there_an_emotion_directed_at_a_brand_or_product']
 text = df['tweet_text']
 
-# what did we do here?
+# Remove all values that are null (blank lines)
 fixed_text = text[pd.notnull(text)]
 fixed_target = target[pd.notnull(text)]
 

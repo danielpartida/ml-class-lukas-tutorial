@@ -23,8 +23,10 @@ counts = count_vect.transform(text)
 # Train with this data with a Naive Bayes classifier:
 from sklearn.naive_bayes import MultinomialNB
 
+# The multinomial Naive Bayes classifier is suitable for classification with discrete features 
+# (e.g., word counts for text classification)
 nb = MultinomialNB()
 nb.fit(counts, target)
 
 #Try the classifier
-print(nb.predict(count_vect.transform(['i hate my iphone'])))
+print(nb.predict(count_vect.transform(['mac is beautiful'])))
